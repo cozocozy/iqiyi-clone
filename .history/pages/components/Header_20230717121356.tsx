@@ -64,28 +64,30 @@ function Header({}: Props) {
 
       {/* bottom part */}
 
-      <div className="flex flex-row lg:hidden p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3 lg:space-x-0 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 lg:p-0 ease-out duration-300">
-        <div className=" pages">
-          <Link href="#">For You</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Destined</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Drama</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">K-Drama</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Movies</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Anime</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Variety Show</Link>
-        </div>
+      <div className="flex flex-row  p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 ">
+        <Link href="#" className="text-white pages lg:hover:text-green-500 hover:bg-gray-600">
+          For You
+        </Link>
+        <div className="border border-red-500">
+        <Link href="#" className=" pages lg:hover:text-green-500 hover:bg-gray-600 ">
+          Destined
+          </div>
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500 hover:bg-gray-600">
+          Drama
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500 hover:bg-gray-600 ">
+          K-Drama
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500 hover:bg-gray-600">
+          Movies
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500hover:bg-gray-600">
+          Anime
+        </Link>
+        <Link href="#" className=" pages browse lg:hover:text-green-500 hover:bg-gray-600">
+          Variety Show
+        </Link>
       </div>
     </div>
   );

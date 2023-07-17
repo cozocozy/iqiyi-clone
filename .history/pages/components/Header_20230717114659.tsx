@@ -26,15 +26,15 @@ function Header({}: Props) {
         </div>
 
         {/* search  part */}
-        <div className="relative flex justify-end items-center w-full mx-auto mt-1 lg:max-w-xs lg:mr-4 lg:mt-2">
-          <input className="border-none rounded rounded-md bg-neutral-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg" placeholder="search here.." autoComplete="off"></input>
-          <button className="absolute h-full mr-4 border-l border-gray-500 pl-3">
+        <div className="relative flex justify-end items-center w-full mx-auto mt-1 lg:max-w-sm lg:mr-24 lg:mt-2 lg:ml-2">
+          <input className="border-none rounded rounded-md bg-neutral-700 w-full pl-3 pb-1 focus:outline-none" placeholder="search here.." autoComplete="off"></input>
+          <button className="absolute h-full mr-4 border-l pl-3">
             <BsSearch size={18} />
           </button>
         </div>
 
         {/* desktop version */}
-        <div className="lg:flex lg:mt-2 lg:mr-4">
+        <div className="lg:flex lg:mt-2 lg:mr-6">
           <div className="navbar lg:hover:border-green-500 lg:hover:text-green-500 cursor-pointer ">
             <BiTimeFive size={25} />
             <h1>History</h1>
@@ -64,28 +64,28 @@ function Header({}: Props) {
 
       {/* bottom part */}
 
-      <div className="flex flex-row lg:hidden p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3 lg:space-x-0 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 lg:p-0 ease-out duration-300">
-        <div className=" pages">
-          <Link href="#">For You</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Destined</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Drama</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">K-Drama</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Movies</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Anime</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Variety Show</Link>
-        </div>
+      <div className="flex flex-row  p-3 overflow-x-auto container-snap whitespace-nowrap space-x-6 ml-3 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center " id="dropdownHover">
+        <Link href="#" className="text-white pages lg:ml-5 lg:hover:text-green-500">
+          For You
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500 ">
+          Destined
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500 ">
+          Drama
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500 ">
+          K-Drama
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500 ">
+          Movies
+        </Link>
+        <Link href="#" className=" pages lg:hover:text-green-500 lg:hidden">
+          Anime
+        </Link>
+        <Link href="#" className=" pages browse lg:hover:text-green-500 lg:hidden">
+          Variety Show
+        </Link>
       </div>
     </div>
   );

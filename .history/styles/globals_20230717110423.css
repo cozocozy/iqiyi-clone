@@ -26,12 +26,16 @@ body {
 
 @layer components {
   .pages {
-    @apply hover:text-green-500  lg:hover:text-green-500 lg:hover:bg-gray-700 lg:w-full lg:p-3;
+    @apply hover:text-green-500;
   }
   .navbar {
     @apply hidden lg:flex lg:text-sm lg:mx-5 lg:flex lg:flex-col lg:items-center;
   }
   .appBtn {
     @apply lg:w-20 lg:border lg:border-white;
+  }
+
+  .navbarControl {
+    @apply lg:z-10 lg:hidden lg:bg-white lg:divide-y= lg:dark:bg-gray-700;
   }
 }

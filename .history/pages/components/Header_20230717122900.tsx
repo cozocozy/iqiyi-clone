@@ -64,7 +64,7 @@ function Header({}: Props) {
 
       {/* bottom part */}
 
-      <div className="flex flex-row lg:hidden p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3 lg:space-x-0 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 lg:p-0 ease-out duration-300">
+      <div className="flex flex-row  p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3  text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 lg:p-0 ease-out duration-300">
         <div className=" pages">
           <Link href="#">For You</Link>
         </div>

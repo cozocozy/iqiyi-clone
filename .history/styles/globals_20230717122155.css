@@ -26,7 +26,7 @@ body {
 
 @layer components {
   .pages {
-    @apply hover:text-green-500  lg:hover:text-green-500 lg:hover:bg-gray-700 lg:w-full lg:p-3;
+    @apply hover:text-green-500  lg:hover:text-green-500 lg:hover:bg-gray-700;
   }
   .navbar {
     @apply hidden lg:flex lg:text-sm lg:mx-5 lg:flex lg:flex-col lg:items-center;

@@ -64,27 +64,48 @@ function Header({}: Props) {
 
       {/* bottom part */}
 
-      <div className="flex flex-row lg:hidden p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3 lg:space-x-0 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 lg:p-0 ease-out duration-300">
-        <div className=" pages">
-          <Link href="#">For You</Link>
+      <div className="flex flex-row  p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 lg:p-0 ">
+        <div className="lg:border lg:border-red-400 lg:w-full">
+          <Link href="#" className="text-white ">
+            For You
+          </Link>
         </div>
-        <div className=" pages">
-          <Link href="#">Destined</Link>
+        <div
+          className="lg:border lg:border-red-400 lg:w-full lg:hover:bg-gray-700 pages
+pages
+pages
+pages
+pages
+pages"
+        >
+          <Link href="#" className="   ">
+            Destined
+          </Link>
         </div>
-        <div className=" pages">
-          <Link href="#">Drama</Link>
+        <div className="lg:border lg:border-red-400 lg:w-full">
+          <Link href="#" className="  ">
+            Drama
+          </Link>
         </div>
-        <div className=" pages">
-          <Link href="#">K-Drama</Link>
+        <div className="lg:border lg:border-red-400 lg:w-full">
+          <Link href="#" className="   ">
+            K-Drama
+          </Link>
         </div>
-        <div className=" pages">
-          <Link href="#">Movies</Link>
+        <div className="lg:border lg:border-red-400 lg:w-full">
+          <Link href="#" className="  ">
+            Movies
+          </Link>
         </div>
-        <div className=" pages">
-          <Link href="#">Anime</Link>
+        <div className="lg:border lg:border-red-400 lg:w-full">
+          <Link href="#" className=" ">
+            Anime
+          </Link>
         </div>
-        <div className=" pages">
-          <Link href="#">Variety Show</Link>
+        <div className="lg:border lg:border-red-400 lg:w-full">
+          <Link href="#" className=" pages browse lg:hover:text-green-500 ">
+            Variety Show
+          </Link>
         </div>
       </div>
     </div>
