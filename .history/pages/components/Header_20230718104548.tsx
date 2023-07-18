@@ -7,23 +7,17 @@ import { AiOutlineUser } from "react-icons/ai";
 import { CiGlobe } from "react-icons/ci";
 import { PiCrownSimpleFill } from "react-icons/pi";
 import { useState } from "react";
-import Sidebar from "./Sidebar";
 
 type Props = {};
 
 function Header({}: Props) {
   const [show, setShow] = useState(false);
-  const [sidebar, setSideBar] = useState(false);
   return (
     <div className="fixed top-0 z-50 bg-black w-full lg:bg-transparent">
-      {sidebar && <Sidebar />}
       <div className="flex justify-between items-center py-1 lg:p-3 lg:ml-3 ">
         {/* left part */}
         <div className="flex ml-4 mx-3">
-          {/* sidebar button */}
-          <button onClick={() => setSideBar(!sidebar)}>
-            <AiOutlineMenu size={20} className=" lg:hidden" />
-          </button>
+          <AiOutlineMenu size={20} className="mt-2  lg:hidden" />
           <h3 className="text-2xl text-green-500 font-bold ml-2 lg:text-4xl lg:ml-4">IQIYI</h3>{" "}
           <button class="text-gray-400 hidden lg:ml-6 lg:flex z-20 lg:bg-transparent hover:text-green-500 font-medium text-lg text-center items-center" type="button" onClick={() => setShow(!show)}>
             Browse
@@ -35,7 +29,7 @@ function Header({}: Props) {
 
         {/* search  part */}
         <div className="relative flex justify-end items-center w-full mx-auto mt-1 lg:max-w-xs lg:mr-4 lg:mt-2">
-          <input className="border-none rounded rounded-md bg-zinc-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg" placeholder="search here.." autoComplete="off"></input>
+          <input className="border-none rounded rounded-md bg-neutral-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg" placeholder="search here.." autoComplete="off"></input>
           <button className="absolute h-full mr-4 border-l border-gray-500 pl-3">
             <BsSearch size={18} />
           </button>
@@ -97,6 +91,9 @@ function Header({}: Props) {
         </div>
       )}
     </div>
+      <div className="fixed top-0 left-0 z-60 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-white border border-red-500">
+        <div className="">Menu</div>
+      </div>
   );
 }
 

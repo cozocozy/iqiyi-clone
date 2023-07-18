@@ -10,6 +10,7 @@ export default function Home() {
         <meta name="description" content="CLONE OF IQIYI WEBSITE" />
       </Head>
       <Header />
+      <Sidebar />
     </main>
   );
 }

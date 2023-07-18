@@ -16,7 +16,6 @@ function Header({}: Props) {
   const [sidebar, setSideBar] = useState(false);
   return (
     <div className="fixed top-0 z-50 bg-black w-full lg:bg-transparent">
-      {sidebar && <Sidebar />}
       <div className="flex justify-between items-center py-1 lg:p-3 lg:ml-3 ">
         {/* left part */}
         <div className="flex ml-4 mx-3">
@@ -24,6 +23,7 @@ function Header({}: Props) {
           <button onClick={() => setSideBar(!sidebar)}>
             <AiOutlineMenu size={20} className=" lg:hidden" />
           </button>
+          {sidebar && <div className="pointer-events-none"></div><Sidebar />}
           <h3 className="text-2xl text-green-500 font-bold ml-2 lg:text-4xl lg:ml-4">IQIYI</h3>{" "}
           <button class="text-gray-400 hidden lg:ml-6 lg:flex z-20 lg:bg-transparent hover:text-green-500 font-medium text-lg text-center items-center" type="button" onClick={() => setShow(!show)}>
             Browse

@@ -7,25 +7,19 @@ import { AiOutlineUser } from "react-icons/ai";
 import { CiGlobe } from "react-icons/ci";
 import { PiCrownSimpleFill } from "react-icons/pi";
 import { useState } from "react";
-import Sidebar from "./Sidebar";
 
 type Props = {};
 
 function Header({}: Props) {
   const [show, setShow] = useState(false);
-  const [sidebar, setSideBar] = useState(false);
   return (
     <div className="fixed top-0 z-50 bg-black w-full lg:bg-transparent">
-      {sidebar && <Sidebar />}
       <div className="flex justify-between items-center py-1 lg:p-3 lg:ml-3 ">
         {/* left part */}
         <div className="flex ml-4 mx-3">
-          {/* sidebar button */}
-          <button onClick={() => setSideBar(!sidebar)}>
-            <AiOutlineMenu size={20} className=" lg:hidden" />
-          </button>
+          <AiOutlineMenu size={20} className="mt-2  lg:hidden" />
           <h3 className="text-2xl text-green-500 font-bold ml-2 lg:text-4xl lg:ml-4">IQIYI</h3>{" "}
-          <button class="text-gray-400 hidden lg:ml-6 lg:flex z-20 lg:bg-transparent hover:text-green-500 font-medium text-lg text-center items-center" type="button" onClick={() => setShow(!show)}>
+          <button class="text-gray-400 hidden lg:ml-6 lg:flex z-20 lg:bg-transparent hover:text-green-500 font-medium text-lg text-center items-center" type="button">
             Browse
             <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
@@ -35,7 +29,7 @@ function Header({}: Props) {
 
         {/* search  part */}
         <div className="relative flex justify-end items-center w-full mx-auto mt-1 lg:max-w-xs lg:mr-4 lg:mt-2">
-          <input className="border-none rounded rounded-md bg-zinc-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg" placeholder="search here.." autoComplete="off"></input>
+          <input className="border-none rounded rounded-md bg-neutral-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg" placeholder="search here.." autoComplete="off"></input>
           <button className="absolute h-full mr-4 border-l border-gray-500 pl-3">
             <BsSearch size={18} />
           </button>
@@ -71,31 +65,30 @@ function Header({}: Props) {
       </div>
 
       {/* bottom part */}
-      {show && (
-        <div className="flex flex-row p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3 lg:space-x-0 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 lg:p-0 ease-out duration-300">
-          <div className=" pages">
-            <Link href="#">For You</Link>
-          </div>
-          <div className=" pages">
-            <Link href="#">Destined</Link>
-          </div>
-          <div className=" pages">
-            <Link href="#">Drama</Link>
-          </div>
-          <div className=" pages">
-            <Link href="#">K-Drama</Link>
-          </div>
-          <div className=" pages">
-            <Link href="#">Movies</Link>
-          </div>
-          <div className=" pages">
-            <Link href="#">Anime</Link>
-          </div>
-          <div className=" pages">
-            <Link href="#">Variety Show</Link>
-          </div>
+
+      <div className="flex flex-row lg:hidden p-3 overflow-x-auto container-snap whitespace-nowrap space-x-4 ml-3 lg:space-x-0 text-gray-300 md:justify-center md:items-center lg:flex-col lg:text-center lg:border lg:w-36 lg:ml-32 lg:space-y-2 lg:p-0 ease-out duration-300">
+        <div className=" pages">
+          <Link href="#">For You</Link>
         </div>
-      )}
+        <div className=" pages">
+          <Link href="#">Destined</Link>
+        </div>
+        <div className=" pages">
+          <Link href="#">Drama</Link>
+        </div>
+        <div className=" pages">
+          <Link href="#">K-Drama</Link>
+        </div>
+        <div className=" pages">
+          <Link href="#">Movies</Link>
+        </div>
+        <div className=" pages">
+          <Link href="#">Anime</Link>
+        </div>
+        <div className=" pages">
+          <Link href="#">Variety Show</Link>
+        </div>
+      </div>
     </div>
   );
 }
