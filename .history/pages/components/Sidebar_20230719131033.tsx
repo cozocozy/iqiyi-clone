@@ -1,26 +1,21 @@
 import React from "react";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
-import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import Link from "next/link";
 type Props = {};
 
 function Sidebar({}: Props) {
   const [sidebar, setSideBar] = useState(false);
-
   return (
     <div className="lg:hidden">
-      <button className="z-50 relative mt-3 ml-2 " onClick={() => setSideBar(!sidebar)}>
+      <button className="z-50 relative mt-3 ml-2" onClick={() => setSideBar(!sidebar)}>
         <AiOutlineMenu size={20} className="" />
       </button>
       {sidebar && (
-        <>
-          <div className="fixed top-0 left-0 z-50 bg-white h-full w-[50%] max-w-sm ">
+        <div className="w-full flex bg-red-500 border border-red-500">
+          <div className="fixed top-0 left-0 z-50 bg-white h-full w-[50%] max-w-sm">
             <div className="text-md flex items-center justify-start h-24 bg-gradient-to-r from-green-950 to-green-800 font-semibold  ">
-              <div className="absolute top-0 right-0 m-2 cursor-pointer" onClick={() => setSideBar(!sidebar)}>
-                <AiOutlineClose size={25} />
-              </div>
               <div className="ml-7">
                 <BiSolidUserCircle size={40} color="gray" />
               </div>
@@ -82,8 +77,7 @@ function Sidebar({}: Props) {
               <div className="rounded rounded-md w-[75%] h-9 mx-auto text-white bg-gray-950 flex justify-center items-center text-xs font-semibold">Google Play</div>
             </div>
           </div>
-          <div className="fixed top-0 right-0 z-50 bg-transparent h-full w-[50%] max-w-sm filter:blur-md"></div>
-        </>
+        </div>
       )}
     </div>
   );

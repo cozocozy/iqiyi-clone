@@ -1,23 +1,29 @@
 import React from "react";
 import { BsArrowDownSquare, BsSearch } from "react-icons/bs";
+import { AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 import { BiTimeFive } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
 import { CiGlobe } from "react-icons/ci";
 import { PiCrownSimpleFill } from "react-icons/pi";
 import { useState } from "react";
+import Sidebar from "./Sidebar";
 
 type Props = {};
 
 function Header({}: Props) {
   const [show, setShow] = useState(false);
-
+  const [sidebar, setSideBar] = useState(false);
   return (
     <div className="fixed top-0 z-50 bg-black w-full lg:bg-transparent">
+      {/* {sidebar && <Sidebar />} */}
       <div className="flex justify-between items-center py-1 lg:p-3 lg:ml-3 ">
         {/* left part */}
         <div className="flex ml-4 mx-3">
-          <h3 className="text-2xl text-green-500 font-bold ml-4 lg:text-4xl lg:ml-4">IQIYI</h3>{" "}
+          {/* <button onClick={() => setSideBar(!sidebar)}>
+            <AiOutlineMenu size={20} className=" lg:hidden" />
+          </button> */}
+          <h3 className="text-2xl text-green-500 font-bold ml-3 lg:text-4xl lg:ml-4">IQIYI</h3>{" "}
           <button class="text-gray-400 hidden lg:ml-6 lg:flex z-20 lg:bg-transparent hover:text-green-500 font-medium text-lg text-center items-center" type="button" onClick={() => setShow(!show)}>
             Browse
             <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">

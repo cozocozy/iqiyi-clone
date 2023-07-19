@@ -18,8 +18,8 @@ function Sidebar({}: Props) {
         <>
           <div className="fixed top-0 left-0 z-50 bg-white h-full w-[50%] max-w-sm ">
             <div className="text-md flex items-center justify-start h-24 bg-gradient-to-r from-green-950 to-green-800 font-semibold  ">
-              <div className="absolute top-0 right-0 m-2 cursor-pointer" onClick={() => setSideBar(!sidebar)}>
-                <AiOutlineClose size={25} />
+              <div className="absolute top-0 right-0 m-2">
+                <AiOutlineClose size={25} onClick={() => setSideBar(sidebar)} />
               </div>
               <div className="ml-7">
                 <BiSolidUserCircle size={40} color="gray" />
