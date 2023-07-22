@@ -74,19 +74,19 @@ function Header({}: Props) {
           <Link href="#">For You</Link>
         </div>
         <div className=" pages">
-          <Link href="#">Now Playing</Link>
+          <Link href="#">Popular</Link>
         </div>
         <div className=" pages">
           <Link href="#">Top Rated</Link>
-        </div>
-        <div className=" pages">
-          <Link href="#">Popular</Link>
         </div>
         <div className=" pages">
           <Link href="#">Upcoming</Link>
         </div>
         <div className=" pages">
           <Link href="#">TV-Series</Link>
+        </div>
+        <div className=" pages">
+          <Link href="#">Variety Show</Link>
         </div>
       </div>
     </div>
