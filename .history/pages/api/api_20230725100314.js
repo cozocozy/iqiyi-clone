@@ -21,7 +21,8 @@ export const getMovieList = async () => {
   //   })
   //   .catch((err) => console.error(err));
   const movie = await axios.get("https://api.themoviedb.org/3/movie/popular", { options });
-  return movie.data.results;
+  console.log(movie.data.results);
+  // return movie.data.results;
 };
 
 export const searchMovie = async (q) => {

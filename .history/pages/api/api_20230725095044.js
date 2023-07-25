@@ -9,7 +9,8 @@ export const getMovieList = async () => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${token}`,
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MTI4MWM4ZTA3MzZlMzQxNDFhNjA2ZWQ3MTA4NmY5NyIsInN1YiI6IjY0YmRmYzA5NThlZmQzMDBhY2UyNmNmNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tXlgTd8pgbyDyj1tNRU9m350d9lzWdKpAfO8l8WTp60",
     },
   };
 
@@ -20,8 +21,8 @@ export const getMovieList = async () => {
   //     return responseData.results;
   //   })
   //   .catch((err) => console.error(err));
-  const movie = await axios.get("https://api.themoviedb.org/3/movie/popular", { options });
-  return movie.data.results;
+  const response = await fetch(address, options);
+  const result = await response.json();
 };
 
 export const searchMovie = async (q) => {

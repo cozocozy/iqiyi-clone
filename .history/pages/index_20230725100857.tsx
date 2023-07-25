@@ -17,6 +17,16 @@ export default function Home() {
   const search = (q) => {
     console.log({ q });
   };
+  const PopularMovieList = () => {
+    return popularMovies.map((movies, i) => {
+      return (
+        <div>
+          <div></div>
+          <div>{movies.title}</div>
+        </div>
+      );
+    });
+  };
   return (
     <main>
       <Head>
@@ -28,10 +38,11 @@ export default function Home() {
       <Slider />
       <section>
         <div className="flex flex-row max-w-sm text-xl font-bold py-2 px-4 xl:text-3xl xl:mx-10 xl:my-4">Popular on iQIYI</div>
-        <div className="flex flex-row ml-4 rounded rounded-md space-x-2 cursor-pointer">
-          {popularMovies.map((movies, i) => (
-            <MovieList key={movies.id} movies={movies} />
-          ))}
+        <div className="flex flex-row ml-4 w-[9rem] h-[12rem] rounded rounded-md space-x-2 cursor-pointer">
+          {/* {popularMovies?.map((movie) => (
+            <MovieList key={movie.id} movie={movie} />
+          ))} */}
+          <PopularMovieList />
         </div>
       </section>
       <section>

@@ -6,12 +6,10 @@ import { getMovieList, searchMovie } from "./api/api";
 import { useEffect, useState } from "react";
 import MovieList from "./components/MovieList";
 export default function Home() {
-  const [popularMovies, setPopularMovies] = useState([]);
+  const [popularMovies, setPopularMovies] = useState({});
 
   useEffect(() => {
-    getMovieList().then((results) => {
-      setPopularMovies(results);
-    });
+    setPopularMovies(getMovieList());
   }, []);
 
   const search = (q) => {
@@ -28,9 +26,9 @@ export default function Home() {
       <Slider />
       <section>
         <div className="flex flex-row max-w-sm text-xl font-bold py-2 px-4 xl:text-3xl xl:mx-10 xl:my-4">Popular on iQIYI</div>
-        <div className="flex flex-row ml-4 rounded rounded-md space-x-2 cursor-pointer">
-          {popularMovies.map((movies, i) => (
-            <MovieList key={movies.id} movies={movies} />
+        <div className="flex flex-row ml-4 w-[9rem] h-[12rem] rounded rounded-md space-x-2 cursor-pointer">
+          {popularMovies.map((movie) => (
+            <div key={movie.id}>{movie.title}</div>
           ))}
         </div>
       </section>

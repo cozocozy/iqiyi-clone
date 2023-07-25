@@ -20,7 +20,7 @@ export const getMovieList = async () => {
   //     return responseData.results;
   //   })
   //   .catch((err) => console.error(err));
-  const movie = await axios.get("https://api.themoviedb.org/3/movie/popular", { options });
+  const movie = await axios.get("https://api.themoviedb.org/3/movie/popular?page=", { options });
   return movie.data.results;
 };
 
