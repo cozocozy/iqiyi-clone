@@ -24,27 +24,27 @@ export default function Home() {
       <Sidebar />
       <Slider />
       <section>
-        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Popular on iQIYI</div>
+        <div className="flex flex-row max-w-sm text-xl font-bold my-2 xl:text-3xl xl:my-4 select-none">Popular on iQIYI</div>
         <PopularMovies />
       </section>
       <section>
-        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Top Rated for you</div>
+        <div className="flex flex-row max-w-sm text-xl font-bold py-2 xl:text-3xl xl:my-4 select-none">Top Rated for you</div>
         <TopRatedMovies />
       </section>
       <section>
-        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Now Playing</div>
+        <div className="flex flex-row max-w-sm text-xl font-bold py-2 xl:text-3xl xl:my-4 select-none">Now Playing</div>
         <NowPlayingMovies />
       </section>
       <section>
-        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Upcoming movies</div>
+        <div className="flex flex-row max-w-sm text-xl font-bold py-2 xl:text-3xl xl:my-4 select-none">Upcoming movies</div>
         <UpcomingMovies />
       </section>
       <section>
-        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Ongoing TV-Series</div>
+        <div className="flex flex-row max-w-sm text-xl font-bold py-2 xl:text-3xl xl:my-4 select-none">Ongoing TV-Series</div>
         <NowPlayingTV />
       </section>
       <section>
-        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Top TV-Series</div>
+        <div className="flex flex-row max-w-sm text-xl font-bold py-2 xl:text-3xl xl:my-4 select-none">Top TV-Series</div>
         <TopRatedTV />
       </section>
     </main>

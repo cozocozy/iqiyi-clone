@@ -25,7 +25,7 @@ export default function App() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper w-full ml-20 h-[20rem] mt-12 flex justify-center items-center bg-gradient-to-t  from-white contents[hello] to-zinc-900 opacity-80 lg:h-[50rem] lg:top-0 lg:-mt-1"
+        className="mySwiper w-full ml-20 h-[19rem] mt-12 flex justify-center items-center bg-gradient-to-t  from-white contents[hello] to-zinc-900 opacity-80 lg:h-[50rem] lg:top-0 lg:-mt-1"
       >
         <SwiperSlide>
           <img src="https://wallpapercave.com/wp/wp5709958.jpg" alt="" />
