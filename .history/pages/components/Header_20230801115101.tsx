@@ -28,7 +28,7 @@ function Header({}: Props) {
     window.addEventListener("scroll", changeBackground);
   });
   return (
-    <div className={navbar ? "fixed top-0 z-50 bg-black w-full left-0" : "fixed top-0 z-50 bg-black w-full left-0 lg:bg-transparent"}>
+    <div className={navbar ? "fixed top-0 z-50 bg-black w-full left-0" : "fixed top-0 z-50 bg-black w-full left-0 lg:bg-transparent lg:border-t"}>
       <div className="flex justify-between items-center py-1  lg:p-3 lg:ml-3 ">
         {/* left part */}
         <div className="flex ml-4 mx-3">

@@ -41,7 +41,7 @@ function Header({}: Props) {
 
         {/* search  part */}
         <div className="relative flex justify-end items-center w-full mx-auto mt-1 lg:max-w-xs lg:mr-4 lg:mt-2">
-          <input className="border-none rounded rounded-md bg-zinc-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg lg:opacity-80 lg:bg-zinc-500" placeholder="search here.." autoComplete="off"></input>
+          <input className="border-none rounded rounded-md bg-zinc-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg lg:opacity-60 lg:bg-zinc-500" placeholder="search here.." autoComplete="off"></input>
           <button className="absolute h-full mr-4 border-l border-gray-500 pl-3">
             <BsSearch size={18} />
           </button>

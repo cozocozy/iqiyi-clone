@@ -89,7 +89,7 @@ export const getTopRatedTV = async () => {
 };
 
 //search
-export const searchMovie = async () => {
+export const getTopRatedTV = async () => {
   const options = {
     method: "GET",
     headers: {

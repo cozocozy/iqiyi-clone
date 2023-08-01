@@ -1,23 +1,27 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { getNowPlaying } from "../api/api";
+import { getPopular } from "../api/api";
 import { useEffect, useState } from "react";
 // import "swiper/css";
 // import "swiper/css/navigation";
 type Props = {};
 
-function NowPlayingMovies({}: Props) {
-  const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
+function PopularMovies({}: Props) {
+  const [popularMovies, setPopularMovies] = useState([]);
 
   useEffect(() => {
-    getNowPlaying().then((results) => {
-      setNowPlayingMovies(results);
+    getPopular().then((results) => {
+      setPopularMovies(results);
     });
   }, []);
 
+  const search = (q) => {
+    console.log({ q });
+  };
   return (
     <div>
+      <div className="z-10 flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Popular on iQIYI</div>
       <Swiper
         spaceBetween={20}
         slidesPerGroup={1}
@@ -45,8 +49,7 @@ function NowPlayingMovies({}: Props) {
         modules={[Navigation]}
         className="flex w-full"
       >
-        {nowPlayingMovies.map((movies) => (
-          // <PopularMovies key={movies.id} movies={movies} />
+        {popularMovies.map((movies) => (
           <SwiperSlide>
             <img className="rounded-md gradient-mask-b-80 object-cover hover:scale-110 duration-300 ease-out cursor-pointer" src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}></img>
             <div className="text-sm xl:text-xl">{movies.title}</div>
@@ -57,4 +60,4 @@ function NowPlayingMovies({}: Props) {
   );
 }
 
-export default NowPlayingMovies;
+export default PopularMovies;

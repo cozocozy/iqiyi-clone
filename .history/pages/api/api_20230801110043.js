@@ -89,7 +89,7 @@ export const getTopRatedTV = async () => {
 };
 
 //search
-export const searchMovie = async () => {
+export const getTopRatedTV = async () => {
   const options = {
     method: "GET",
     headers: {
@@ -98,6 +98,6 @@ export const searchMovie = async () => {
     },
   };
 
-  const movie = await axios.get("https://api.themoviedb.org/3/search/movie?api_key=91281c8e0736e34141a606ed71086f97", { options });
+  const movie = await axios.get("https://api.themoviedb.org/3/tv/top_rated?api_key=91281c8e0736e34141a606ed71086f97", { options });
   return movie.data.results;
 };

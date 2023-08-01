@@ -33,12 +33,12 @@ export default function Slider() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper w-full h-[20rem] object-cover mt-12 bg-gradient-to-t cursor-pointer from-white  to-zinc-900 opacity-80 lg:h-[50rem] lg:w-full lg:top-0 lg:-mt-1"
+        className="mySwiper w-full h-[20rem] mt-12 bg-gradient-to-t cursor-pointer from-white  to-zinc-900 opacity-80 lg:h-[50rem] lg:top-0 lg:-mt-1"
       >
         {nowPlayingMovies.map((movies) => (
           // <PopularMovies key={movies.id} movies={movies} />
           <SwiperSlide>
-            <img className="" src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}></img>
+            <img className="w-30 h-30 object-cover" src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}></img>
           </SwiperSlide>
         ))}
       </Swiper>

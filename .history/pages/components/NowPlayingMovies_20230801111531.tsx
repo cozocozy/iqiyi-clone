@@ -57,4 +57,4 @@ function NowPlayingMovies({}: Props) {
   );
 }
 
-export default NowPlayingMovies;
+export default PopularMovies;

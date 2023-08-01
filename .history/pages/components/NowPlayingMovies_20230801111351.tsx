@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 // import "swiper/css/navigation";
 type Props = {};
 
-function NowPlayingMovies({}: Props) {
+function nowPlayingMovies({}: Props) {
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
 
   useEffect(() => {
@@ -57,4 +57,4 @@ function NowPlayingMovies({}: Props) {
   );
 }
 
-export default NowPlayingMovies;
+export default PopularMovies;
