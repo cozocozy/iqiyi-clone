@@ -47,11 +47,11 @@ function Footer({}: Props) {
 
           {/* icons */}
           <div className="flex justify-between w-[80%] lg:w-[20%] lg:justify-end lg:flex-col lg:order-last lg:h-full lg:justify-center lg:items-start lg:space-y-[9rem] 2xl:w-[30%] ">
-          <select className="flex border rounded-md p-2 items-center h-9 text-xs cursor-pointer mt-3 ml-7 bg-black">
-          <option selected>English <IoIosArrowDown className="m-1 mt-1" /></option>
-  <option value="US">Indonesia</option>
-  <option value="CA">Mandarin</option>
-            <CiGlobe className="mr-2" />
+          <select className="flex border rounded-md p-2 items-center h-8 text-xs cursor-pointer mt-3 ml-7">
+          <option selected>            <CiGlobe className="mr-2" </option>
+  <option value="US">Mandarin</option>
+  <option value="CA">Canada</option>
+/>
             English <IoIosArrowDown className="m-1 mt-1" />
           </select>
           <div className=" cursor-pointer ">
