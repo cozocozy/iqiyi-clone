@@ -30,9 +30,10 @@ function Header({}: Props) {
     window.addEventListener("scroll", changeBackground);
   });
 
-  const handleSubmit = async () => {
-    const query = await searchMovie(search);
+  const handleSubmit = async (e) => {
+    const query = await searchMovie(e);
     console.log(query);
+    // location.href = "/search";
   };
   return (
     <div className={navbar ? "fixed top-0 z-50 bg-black w-full left-0" : "fixed top-0 z-50 bg-black w-full left-0 lg:bg-transparent"}>

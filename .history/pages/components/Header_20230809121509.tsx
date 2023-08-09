@@ -32,7 +32,7 @@ function Header({}: Props) {
 
   const handleSubmit = async () => {
     const query = await searchMovie(search);
-    console.log(query);
+    return query;
   };
   return (
     <div className={navbar ? "fixed top-0 z-50 bg-black w-full left-0" : "fixed top-0 z-50 bg-black w-full left-0 lg:bg-transparent"}>

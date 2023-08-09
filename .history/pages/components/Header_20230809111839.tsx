@@ -30,9 +30,9 @@ function Header({}: Props) {
     window.addEventListener("scroll", changeBackground);
   });
 
-  const handleSubmit = async () => {
-    const query = await searchMovie(search);
-    console.log(query);
+  const handleSubmit = () => {
+    e.perventDefault;
+    setSearch(search);
   };
   return (
     <div className={navbar ? "fixed top-0 z-50 bg-black w-full left-0" : "fixed top-0 z-50 bg-black w-full left-0 lg:bg-transparent"}>
@@ -54,7 +54,7 @@ function Header({}: Props) {
             placeholder="search here.."
             autoComplete="off"
           />
-          <button onClick={handleSubmit} className="absolute h-full mr-4 border-l border-gray-500 pl-3">
+          <button className="absolute h-full mr-4 border-l border-gray-500 pl-3">
             <BsSearch size={18} />
           </button>
         </div>

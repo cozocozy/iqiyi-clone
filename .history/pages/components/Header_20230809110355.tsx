@@ -14,7 +14,6 @@ type Props = {};
 function Header({}: Props) {
   const [show, setShow] = useState(true);
   const [navbar, setNavbar] = useState(false);
-  const [search, setSearch] = useState("");
 
   const changeBackground = () => {
     console.log(window.scrollY);
@@ -30,9 +29,8 @@ function Header({}: Props) {
     window.addEventListener("scroll", changeBackground);
   });
 
-  const handleSubmit = async () => {
-    const query = await searchMovie(search);
-    console.log(query);
+  const search = async (q) => {
+    const query = await searchMovie(q);
   };
   return (
     <div className={navbar ? "fixed top-0 z-50 bg-black w-full left-0" : "fixed top-0 z-50 bg-black w-full left-0 lg:bg-transparent"}>
@@ -49,12 +47,12 @@ function Header({}: Props) {
         {/* search  part */}
         <div className="relative flex justify-end items-center w-full mx-auto mt-1 lg:max-w-xs lg:mr-4 lg:mt-2">
           <input
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={({ target }) => search(target.value)}
             className="border-none rounded rounded-md bg-zinc-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg lg:opacity-80 lg:bg-zinc-500"
             placeholder="search here.."
             autoComplete="off"
           />
-          <button onClick={handleSubmit} className="absolute h-full mr-4 border-l border-gray-500 pl-3">
+          <button onClick={} className="absolute h-full mr-4 border-l border-gray-500 pl-3">
             <BsSearch size={18} />
           </button>
         </div>
