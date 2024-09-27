@@ -2,11 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald&family=Poppins&display=swap');
-=======
->>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,13 +14,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-<<<<<<< HEAD
     --background-start-rgb:24, 24, 27;
     --background-end-rgb: 9, 9, 12;
-=======
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
->>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
   }
 }
 .image-swiper-button-next {

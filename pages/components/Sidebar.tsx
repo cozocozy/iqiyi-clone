@@ -74,19 +74,11 @@ function Sidebar({}: Props) {
                   Term of Services
                 </Link>
               </div>
-<<<<<<< HEAD
               {/* <div className="rounded rounded-md w-[75%] h-9 mx-auto text-white bg-gray-950 flex justify-center items-center text-xs font-semibold">Playstore</div>
               <div className="rounded rounded-md w-[75%] h-9 mx-auto text-white bg-gray-950 flex justify-center items-center text-xs font-semibold">Google Play</div> */}
             </div>
           </div>
           <div className="fixed top-0 right-0 z-50 bg-black opacity-40 cursor-pointer h-full w-[50%] max-w-sm" onClick={() => setSideBar(!sidebar)}></div>
-=======
-              <div className="rounded rounded-md w-[75%] h-9 mx-auto text-white bg-gray-950 flex justify-center items-center text-xs font-semibold">Playstore</div>
-              <div className="rounded rounded-md w-[75%] h-9 mx-auto text-white bg-gray-950 flex justify-center items-center text-xs font-semibold">Google Play</div>
-            </div>
-          </div>
-          <div className="fixed top-0 right-0 z-50 bg-black opacity-40 h-full w-[50%] max-w-sm" onClick={() => setSideBar(!sidebar)}></div>
->>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
         </>
       )}
     </div>
