@@ -14,6 +14,7 @@ type Props = {};
 function Header({}: Props) {
   const [show, setShow] = useState(true);
   const [navbar, setNavbar] = useState(false);
+<<<<<<< HEAD
   const [searchBar, setSearchBar] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -22,6 +23,12 @@ function Header({}: Props) {
   };
 
   const changeBackground = () => {
+=======
+  const [search, setSearch] = useState("");
+
+  const changeBackground = () => {
+    console.log(window.scrollY);
+>>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
     if (window.scrollY >= 750) {
       setNavbar(true);
     } else {
@@ -51,6 +58,7 @@ function Header({}: Props) {
         </div>
 
         {/* search  part */}
+<<<<<<< HEAD
           <div className="relative flex justify-end items-center w-full mx-auto mt-1 lg:max-w-xs lg:mr-4 lg:mt-2">
           <input
             onChange={(e) => setSearch(e.target.value)}
@@ -58,10 +66,23 @@ function Header({}: Props) {
             placeholder="search here.."
             autoComplete="off"
             />
+=======
+        <div className="relative flex justify-end items-center w-full mx-auto mt-1 lg:max-w-xs lg:mr-4 lg:mt-2">
+          <input
+            onChange={(e) => setSearch(e.target.value)}
+            className="border-none rounded rounded-md bg-zinc-700 w-full pl-3 pb-1 focus:outline-none lg:h-8 lg:text-lg lg:opacity-80 lg:bg-zinc-500"
+            placeholder="search here.."
+            autoComplete="off"
+          />
+>>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
           <button onClick={handleSubmit} className="absolute h-full mr-4 border-l border-gray-500 pl-3">
             <BsSearch size={18} />
           </button>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
         {/* desktop version */}
         <div className="lg:flex lg:mt-2 lg:mr-4">
           <div className="navbar lg:hover:border-green-500 lg:hover:text-green-500 cursor-pointer ">
@@ -118,10 +139,14 @@ function Header({}: Props) {
           <Link href="#">Top Rated Series</Link>
         </div>
       </div>
+<<<<<<< HEAD
 
     </div>
 
     // test
+=======
+    </div>
+>>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
   );
 }
 

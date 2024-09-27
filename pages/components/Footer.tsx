@@ -12,10 +12,17 @@ type Props = {};
 function Footer({}: Props) {
   return (
     <>
+<<<<<<< HEAD
       <div className="-mx-2 lg:-mx-12">
 
         {/* footer first */}
         <div className="flex flex-col rounded-sm bg-zinc-950 flex border-t border-gray-700 space-y-3 lg:space-y-4 items-center h-[12rem] lg:h-[11rem]">
+=======
+      <div className=" mx-auto ">
+
+        {/* footer first */}
+        <div className="flex flex-col bg-black w-full flex border-t border-gray-700 space-y-3 lg:space-y-4 items-center h-[12rem] lg:h-[11rem]">
+>>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
           <div className="text-white text-lg capitalize font-bold mt-4">get the best experience on the APP</div>
           <div className="text-xs flex text-zinc-300">
             <div className="text-green-500 flex tracking-wide mr-1 mb-2">
@@ -43,7 +50,11 @@ function Footer({}: Props) {
         </div>
 
         {/* footer second */}
+<<<<<<< HEAD
         <div className="flex flex-col bg-zinc-950 w-full border-t h-[12rem]  border-gray-700 items-center lg:flex-row lg:h-[20rem] ">
+=======
+        <div className="flex flex-col bg-black w-full border-t h-[12rem]  border-gray-700 items-center lg:flex-row lg:h-[20rem] ">
+>>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
 
           {/* icons */}
           <div className="flex justify-between w-[80%] lg:w-[20%] lg:justify-end lg:flex-col lg:order-last lg:h-full lg:justify-center lg:items-start lg:space-y-[9rem] 2xl:w-[30%] ">

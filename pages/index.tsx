@@ -17,7 +17,11 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
+<<<<<<< HEAD
     <main id="top" className="mx-4 lg:mx-12 scroll-smooth font-sans text-slate-300">
+=======
+    <main id="top" className="mx-4 lg:mx-12 scroll-smooth bg-gray-950">
+>>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
       <Head>
         <title>IQIYI - Watch Asian Drama Shows Anime Movie Free Online</title>
         <meta name="description" content="CLONE OF IQIYI WEBSITE" />
@@ -26,6 +30,7 @@ export default function Home() {
       <Sidebar />
       <Slider />
       <section>
+<<<<<<< HEAD
         <div className="flex flex-row max-w-sm text-xl font-bold text-slate-100 my-3 xl:text-3xl xl:my-4 select-none">Popular on iQIYI</div>
         <PopularMovies />
       </section>
@@ -58,6 +63,40 @@ export default function Home() {
             <HiChevronUp className="  h-12 w-12 bg-emerald-600 rounded-full cursor-pointer lg:h-14 lg:w-14 hover:bg-emerald-500 transition-all ease-out animate-bounce" />
           </div>
         </div>
+=======
+        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Popular on iQIYI</div>
+        <PopularMovies />
+      </section>
+      <section>
+        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Top Rated for you</div>
+        <TopRatedMovies />
+      </section>
+      <section>
+        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Now Playing</div>
+        <NowPlayingMovies />
+      </section>
+      <section>
+        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Upcoming movies</div>
+        <UpcomingMovies />
+      </section>
+      <section>
+        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Ongoing TV-Series</div>
+        <NowPlayingTV />
+      </section>
+      <section>
+        <div className="flex flex-row max-w-sm text-xl font-bold my-3 xl:text-3xl xl:my-4 select-none">Top TV-Series</div>
+        <TopRatedTV />
+      </section>
+      <section>
+        <Footer />
+      </section>
+      <Link href="#top">
+        <footer className="sticky bottom-5 w-full  cursor-pointer z-50">
+          <div className="flex justify-end items-center">
+            <HiChevronUp className=" h-12 w-12 bg-emerald-600 rounded-full cursor-pointer lg:h-14 lg:w-14 hover:bg-emerald-500 transition-all ease-in-out animate-bounce" />
+          </div>
+        </footer>
+>>>>>>> 96fea41977077dceda43ca01ea5be8f6ea3f3d65
       </Link>
     </main>
   );
