@@ -12,7 +12,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component"
 type Props = {};
 
 function NowPlayingTV({}: Props) {
-  const [nowPlayingTV, setNowPlayingTV] = useState([]);
+  const [nowPlayingTV, setNowPlayingTV] = useState([] as any[]);
 
   useEffect(() => {
     getNowPlayingTV().then((results) => {

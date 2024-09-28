@@ -12,7 +12,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component"
 type Props = {};
 
 function PopularMovies({}: Props) {
-  const [topRatedMovies, setTopRatedMovies] = useState([]);
+  const [topRatedMovies, setTopRatedMovies] = useState([] as any[]);
 
   useEffect(() => {
     getTopRated().then((results) => {

@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 
 export default function Slider() {
-  const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
+  const [nowPlayingMovies, setNowPlayingMovies] = useState([] as any[]);
 
   useEffect(() => {
     getNowPlaying().then((results) => {

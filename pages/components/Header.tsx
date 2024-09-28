@@ -17,7 +17,6 @@ function Header({}: Props) {
   const [search, setSearch] = useState("");
 
   const changeBackground = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 750) {
       setNavbar(true);
     } else {
@@ -32,7 +31,6 @@ function Header({}: Props) {
 
   const handleSubmit = async () => {
     const query = await searchMovie(search);
-    console.log(query);
   };
   return (
     <div className={navbar ? "fixed top-0 z-50 bg-black w-full left-0" : "fixed top-0 z-50 bg-black w-full left-0 lg:bg-transparent"}>

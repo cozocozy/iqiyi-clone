@@ -12,7 +12,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component"
 type Props = {};
 
 function UpcomingMovies({}: Props) {
-  const [upcomingMovies, setUpcomingMovies] = useState([]);
+  const [upcomingMovies, setUpcomingMovies] = useState([] as any[]);
 
   useEffect(() => {
     getUpcoming().then((results) => {

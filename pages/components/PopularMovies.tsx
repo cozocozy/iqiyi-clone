@@ -11,8 +11,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component"
 type Props = {};
 
 function PopularMovies({}: Props) {
-  const [popularMovies, setPopularMovies] = useState([]);
-
+  const [popularMovies, setPopularMovies] = useState([] as any[]);
   useEffect(() => {
     getPopular().then((results) => {
       setPopularMovies(results);

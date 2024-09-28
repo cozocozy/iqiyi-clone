@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const apiKey = process.env.REACT_APP_TOKEN;
-const baseUrl = process.env.REACT_APP_BASEURL;
+const apiKey =process.env.REACT_APP_API_KEY;
 const token = process.env.REACT_APP_TOKEN;
+
 
 // Popular
 export const getPopular = async () => {
@@ -14,7 +14,7 @@ export const getPopular = async () => {
     },
   };
 
-  const movie = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=91281c8e0736e34141a606ed71086f97", { options });
+  const movie = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=91281c8e0736e34141a606ed71086f97`, { options });
   return movie.data.results;
 };
 
@@ -42,7 +42,7 @@ export const getNowPlaying = async () => {
     },
   };
 
-  const movie = await axios.get("https://api.themoviedb.org/3/movie/now_playing?api_key=91281c8e0736e34141a606ed71086f97", { options });
+  const movie = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=91281c8e0736e34141a606ed71086f97`, { options });
   return movie.data.results;
 };
 

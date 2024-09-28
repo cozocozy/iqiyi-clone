@@ -11,7 +11,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component"
 type Props = {};
 
 function TopRatedTV({}: Props) {
-  const [topRated, setTopRatedTV] = useState([]);
+  const [topRated, setTopRatedTV] = useState([] as any[]);
 
   useEffect(() => {
     getTopRatedTV().then((results) => {

@@ -6,20 +6,19 @@ import { useEffect, useState } from "react";
 import { CgPlayButtonO } from "react-icons/cg";
 import {LazyLoadImage} from "react-lazy-load-image-component"
 
-
-// import "swiper/css";
-// import "swiper/css/navigation";
-type Props = {};
+type Props = {
+};
 
 
 function NowPlayingMovies({}: Props) {
-  const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
+  const [nowPlayingMovies, setNowPlayingMovies] = useState([] as any[]);
 
   useEffect(() => {
     getNowPlaying().then((results) => {
       setNowPlayingMovies(results);
     });
   }, []);
+
 
   return (
     <div>
@@ -50,7 +49,7 @@ function NowPlayingMovies({}: Props) {
         modules={[Navigation]}
         className="flex w-full"
       >
-        {nowPlayingMovies.map((movies, i) => (
+        {nowPlayingMovies.map((movies:any, i) => (
           // <PopularMovies key={movies.id} movies={movies} />
           <SwiperSlide key={i}>
             <div className=" duration-500 group">
